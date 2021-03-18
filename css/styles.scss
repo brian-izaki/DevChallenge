@@ -1,0 +1,16 @@
+@import './variables';
+@import './reset';
+@import './home';
+@import './menu';
+
+
+body {
+  background: $background;
+  color: $text-color;
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}

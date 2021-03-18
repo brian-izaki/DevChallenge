@@ -1,0 +1,48 @@
+@media(max-width: $breakpoint-mobile) {
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .content-container  {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 60px 10px 0;
+    box-sizing: border-box;
+
+    .text-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      width: 250px;
+      padding-top: 20px;
+      text-align: center;
+
+      .titulo {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+
+      button {
+        width: 200px;
+        padding: 15px 0;
+        border: none;
+        border-radius: 15px;
+        background: $main-color;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $background;
+      }
+    }
+
+  }
+}
