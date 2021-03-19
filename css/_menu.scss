@@ -1,19 +1,71 @@
-@media(max-width: $breakpoint-mobile) {
+[data-hamburguer="open"] {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 70px 0;
+
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $main-color;
+  }
+
   .menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 20px 0;
+    position: relative;  
+    height: auto;
+  
+    [data-hamburguer="close"] {
+      display: none;
+    }
+  
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 20px;
+      color: $text-color;
+      transition: ease .3s;
 
+      &:hover {
+        filter: brightness(0.3);
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: $breakpoint-mobile) {
+  header { 
+    padding: 30px 0 0;
+    
     .logo {
       font-size: 1.7rem;
-      font-weight: 700;
-      color: $main-color;
     }
 
-    ul {
+    [data-hamburguer="open"] {
+      display: block;
+      border: none;
+      background-color: transparent;
+      padding: 10px;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 5px;
+        width: 30px;
+        box-shadow: 0 10px $main-color, 0 -10px $main-color;
+        background-color: $main-color;
+      }
+    }
+  
+    .menu {
       display: none;
       position: absolute;
       right: 0;
@@ -22,17 +74,34 @@
       height: 100vh;
       padding: 50px 50px 0;
       background: whitesmoke;
-
+  
+      [data-hamburguer="close"] {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+  
+        padding: 12px 20px;
+  
+        border: none;
+        background-color: transparent;
+  
+        font-family: monospace;
+        font-size: 2.125rem;
+      }
+  
+      &.ativo {
+        display: block;
+        animation: menuOpen 0.3s forwards;
+      }
+  
       li + li {
-          margin-top: 40px;
+        margin-top: 40px;
+      }
+      a {
+        font-size: 1.2rem;
       }
     }
-    
-    a {
-      text-decoration: none;
-      font-size: 1.2rem;
-      padding: 20px;
-      color: $text-color;
-    }
   }
+
 }
