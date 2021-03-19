@@ -18,20 +18,19 @@ header {
 
   .menu {
     display: flex;
-    position: relative;  
-    height: auto;
-  
+    position: relative;
+
     [data-hamburguer="close"] {
       display: none;
     }
-  
+
     a {
       text-decoration: none;
       font-size: 1.5rem;
       font-weight: bold;
       padding: 20px;
       color: $text-color;
-      transition: ease .3s;
+      transition: ease 0.3s;
 
       &:hover {
         filter: brightness(0.3);
@@ -40,12 +39,10 @@ header {
   }
 }
 
-
-
 @media (max-width: $breakpoint-mobile) {
-  header { 
+  header {
     padding: 30px 0 0;
-    
+
     .logo {
       font-size: 1.7rem;
     }
@@ -64,7 +61,7 @@ header {
         background-color: $main-color;
       }
     }
-  
+
     .menu {
       display: none;
       position: absolute;
@@ -74,34 +71,34 @@ header {
       height: 100vh;
       padding: 50px 50px 0;
       background: whitesmoke;
-  
+
+      &.ativo {
+        display: block;
+        animation: menuOpen 0.3s forwards;
+      }
+
       [data-hamburguer="close"] {
         display: block;
         position: absolute;
         top: 15px;
         right: 25px;
-  
+
         padding: 12px 20px;
-  
+
         border: none;
         background-color: transparent;
-  
+
         font-family: monospace;
         font-size: 2.125rem;
       }
-  
-      &.ativo {
-        display: block;
-        animation: menuOpen 0.3s forwards;
-      }
-  
+
       li + li {
         margin-top: 40px;
       }
+
       a {
         font-size: 1.2rem;
       }
     }
   }
-
 }

@@ -1,10 +1,10 @@
-$background: #FFFFFF;
-$text-color: #766F68;
-$main-color: #D2872C;
+$background: #ffffff;
+$text-color: #766f68;
+$main-color: #d2872c;
 
 $breakpoint-mobile: 760px;
 
-$font-family: 'Roboto', verdana, arial;
+$font-family: "Roboto", verdana, arial;
 
 @keyframes menuOpen {
   from {
@@ -14,16 +14,5 @@ $font-family: 'Roboto', verdana, arial;
   to {
     opacity: 1;
     transform: translateX(0px);
-  }
-}
-
-@keyframes menuClose {
-  from {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(20px);
   }
 }
